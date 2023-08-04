@@ -10,7 +10,7 @@ const Header = ({ handlePrint }) => {
           </h1>
         </div>
 
-        <div>
+        {/* <div>
           <ul className="flex items-center justify-between flex-wrap ">
             <li>
               <button
@@ -32,7 +32,7 @@ const Header = ({ handlePrint }) => {
               </button>
             </li>
           </ul>
-        </div>
+        </div>  */}
       </header>
     </>
   );

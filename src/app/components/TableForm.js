@@ -24,20 +24,24 @@ const TableForm = ({
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const newItems = {
-      id: uuidv4(),
-      description: description,
-      quantity: quantity,
-      price: price,
-      amount: amount,
-    };
-    setDescription("");
-    setQuantity("");
-    setAmount("");
-    setPrice("");
-    setList([...list, newItems]);
-    setIsEditing(false);
-    // console.log(list);
+    if (!description || !quantity || !price) {
+      alert("please fill in all the details");
+    } else {
+      const newItems = {
+        id: uuidv4(),
+        description: description,
+        quantity: quantity,
+        price: price,
+        amount: amount,
+      };
+      setDescription("");
+      setQuantity("");
+      setAmount("");
+      setPrice("");
+      setList([...list, newItems]);
+      setIsEditing(false);
+      // console.log(list);
+    }
   };
 
   //to calculate the amount of each individual item
