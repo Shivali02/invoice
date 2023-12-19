@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { MdDelete } from "react-icons/md";
 import { FiEdit } from "react-icons/fi";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const TableForm = ({
   description,
@@ -21,11 +23,23 @@ const TableForm = ({
 }) => {
   // The primary purpose of using UUIDs is to ensure that each identifier is globally unique, even when generated in different systems or at different times.
 
+  const toastOptions = {
+    position: "top-center",
+    autoClose: 4000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!description || !quantity || !price) {
-      alert("please fill in all the details");
+      // alert("please fill in all the details");
+      toast.error("please fill in all the details", toastOptions);
     } else {
       const newItems = {
         id: uuidv4(),
@@ -186,6 +200,7 @@ const TableForm = ({
         <p>Grand Total:</p>
         {total.toLocaleString()}
       </div>
+      <ToastContainer />
     </>
   );
 };

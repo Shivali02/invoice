@@ -3,7 +3,7 @@ import React from "react";
 const Table = ({ list, total }) => {
   return (
     <>
-      <table width="100%" className="mb-10">
+      <table width="100%" className="mb-10 mt-16">
         <thead>
           <tr className="bg-gray-200">
             <td className="font-bold">Description</td>

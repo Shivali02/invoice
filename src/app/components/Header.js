@@ -1,11 +1,13 @@
 import React from "react";
+import Image from "next/image";
 
 const Header = ({ handlePrint }) => {
   return (
     <>
       <header className="flex flex-col items-center justify-center mb-5 xl:flex-row  xl:justify-between">
-        <div>
-          <h1 className="font-bold uppercase tracking-wide text-4xl mb-3">
+        <div className="flex ">
+          <Image src="/navkar logo.png" alt="INVOICER" width={80} height={23} />
+          <h1 className="font-bold uppercase tracking-wide text-4xl mb-3 ml-5">
             Invoicer
           </h1>
         </div>

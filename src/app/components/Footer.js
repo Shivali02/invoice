@@ -1,8 +1,8 @@
 import React from "react";
 
 const Footer = ({
-  name,
-  address,
+  clientName,
+  clientAddress,
   website,
   email,
   phone,
@@ -11,31 +11,39 @@ const Footer = ({
 }) => {
   return (
     <>
-      <footer className="footer border-t-2 border-gray-300 pt-5">
-        <ul className="flex flex-wrap items-center justify-center">
-          <li>
+      <footer className="footer  border-t-2 border-gray-300 pt-5">
+        <ul className="grid grid-cols-3  items-center justify-center">
+          {/* <li>
             {" "}
             <span className="font-bold "> your name :</span> {name}
+          </li> */}
+          <li>
+            {" "}
+            <span className="font-bold ">Recipient&apos;s email : </span>{" "}
+            {email}
           </li>
           <li>
             {" "}
-            <span className="font-bold ">your email : </span> {email}
+            <span className="font-bold ">
+              {" "}
+              Recipient&apos;s phone number :
+            </span>{" "}
+            {phone}
           </li>
           <li>
             {" "}
-            <span className="font-bold "> your phone number :</span> {phone}
+            <span className="font-bold "> Recipient&apos;s Address :</span>{" "}
+            {clientAddress}
           </li>
           <li>
             {" "}
-            <span className="font-bold "> your Address :</span> {address}
+            <span className="font-bold "> Recipient&apos;s bank :</span>{" "}
+            {bankName}
           </li>
           <li>
             {" "}
-            <span className="font-bold "> your bank :</span> {bankName}
-          </li>
-          <li>
-            {" "}
-            <span className="font-bold ">account holder name : </span> {name}
+            <span className="font-bold ">account holder name : </span>
+            {clientName}
           </li>
           <li>
             {" "}
